@@ -1,14 +1,14 @@
 <?php
 
-namespace imobiliaria\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use imobiliaria\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 use Auth;
 use Session;
-use imobiliaria\Cidade;
-use imobiliaria\Imovel;
+use App\Cidade;
+use App\Imovel;
 
 class CidadeController extends Controller
 {
