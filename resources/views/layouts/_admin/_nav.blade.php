@@ -2,7 +2,7 @@
     <div class="nav-wrapper blue">
         <div class="container">
             <a href="{{ route('admin.principal') }}" class="brand-logo">
-                SisAdmin
+                SimpleRealEstate
             </a>
             <a href="#" data-activates="mobile-demo" class="button-collapse">
                 <i class="material-icons">

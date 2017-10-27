@@ -51,7 +51,7 @@
             <div class="footer-copyright">
                 <div class="container">
                     © 2016 Copyright Imobiliária
-                    <a class="grey-text text-lighten-4 right" href="#!">Amazondev</a>
+                    <a class="grey-text text-lighten-4 right" target="_blank" href="http://confrariaweb.com.br">Confraria Web</a>
                 </div>
             </div>
         </footer>
