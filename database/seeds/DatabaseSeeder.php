@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(PermissaoSeeds::class);
         $this->call(PapelSeeds::class);
-        $this->call(PaginasSeeds::class);
+        $this->call(PagesTableSeeder::class);
         $this->call(UsuariosSeeds::class);
     }
 }

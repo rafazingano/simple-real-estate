@@ -14,9 +14,9 @@ class UsuariosSeeds extends Seeder
     public function run()
     {
         $usuario = new User();
-        $usuario->name = "Eduardo Tavares";
-        $usuario->email = "admin@mail.com";
-        $usuario->password = bcrypt("123456");
+        $usuario->name = "Rafael Zingano";
+        $usuario->email = "admin@admin.com";
+        $usuario->password = bcrypt("admin");
         $usuario->save();
 
         echo "usuario = " . $usuario . "\n";

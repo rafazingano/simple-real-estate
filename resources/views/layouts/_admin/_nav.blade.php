@@ -46,7 +46,7 @@
                         </li>
                         @endcan
                         <li>
-                            <a href="{{ route('admin.paginas') }}">Páginas</a>
+                            <a href="{{ route('admin.pages.index') }}">Páginas</a>
                         </li>
                         <li>
                             <a href="{{ route('admin.cidades') }}">Cidades</a>
@@ -88,7 +88,7 @@
                         <a href="{{ route('admin.usuarios') }}">Usuários</a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.paginas') }}">Páginas</a>
+                        <a href="{{ route('admin.pages.index') }}">Páginas</a>
                     </li>
                     <li>
                         <a href="{{ route('admin.cidades') }}">Cidades</a>

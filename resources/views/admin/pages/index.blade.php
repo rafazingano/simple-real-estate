@@ -16,22 +16,24 @@
 			<table>
 				<thead>
 					<tr>
-						<th>Id</th>
 						<th>Titulo</th>
-						<th>Descrição</th>
-						<th>Tipo</th>
+						<th>Slug</th>
 						<th>Ação</th>
 					</tr>
 				</thead>
 				<tbody>
-				@foreach($paginas as $pagina)
+				@foreach($pages as $page)
 					<tr>
-						<td>{{ $pagina->id }}</td>
-						<td>{{ $pagina->titulo }}</td>
-						<td>{{ $pagina->descricao }}</td>
-						<td>{{ $pagina->tipo }}</td>
+						<td>{{ $page->title }}</td>
+						<td>{{ $page->slug }}</td>
 						<td>
-							<a class="btn orange" href="{{ route('admin.paginas.editar', $pagina->id) }}">Editar</a>
+							<form action="{{ route('admin.pages.destroy', $page->id) }}" method="POST">
+								<a class="btn orange" href="{{ route('admin.pages.edit', $page->id) }}">Editar</a>
+				                <input type="hidden" name="_method" value="delete" />
+    							{!! csrf_field() !!}
+				                <button class="btn red">Deletar</button>
+				            </form>
+
 						</td>
 					</tr>
 				@endforeach

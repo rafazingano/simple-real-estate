@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{asset('lib/materialize/dist/css/materialize.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
@@ -14,18 +13,21 @@
             @include('layouts._admin._nav')
         </header>
         <main>
-            @if(Session::has('mensagem'))
+
+            @if (session('mensagem'))
                 <div class="container">
                     <div class="row">
-                        <div class="card {{ Session::get('mensagem')['class'] }}">
+                        <div class="card {{ session('class') }}">
                             <div align="center" class="card-content">
-                                {{ Session::get('mensagem')['msg'] }}
+                                {{ session('mensagem') }}
                             </div>
                         </div>
                     </div>
                 </div>
             @endif
+
             @yield('content')
+
         </main>
         <footer class="page-footer blue" >
             <div class="container">

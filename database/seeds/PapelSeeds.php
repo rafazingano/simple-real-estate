@@ -26,10 +26,10 @@ class PapelSeeds extends Seeder
             ]);
         }
 
-        if (!Papel::where('nome', '=', 'vendedor')->count()) {
+        if (!Papel::where('nome', '=', 'corretor')->count()) {
         	$admin = Papel::create([
-                'nome' => 'vendedor',
-                'descricao' => 'Equipe de Vendas'
+                'nome' => 'corretor',
+                'descricao' => 'Equipe de Corretores'
             ]);
         }
         

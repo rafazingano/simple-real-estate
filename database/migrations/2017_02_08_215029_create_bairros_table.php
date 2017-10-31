@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePaginasTable extends Migration
+class CreateBairrosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreatePaginasTable extends Migration
      */
     public function up()
     {
-        Schema::create('paginas', function (Blueprint $table) {
+        Schema::create('bairros', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
-            $table->string('descricao');
-            $table->text('texto');
-            $table->string('imagem')->nullable();
-            $table->text('mapa')->nullable();
-            $table->string('email')->nullable();
-            $table->string('tipo');
+            $table->string('nome');
+            $table->integer('cidade_id')->unsigned();
+            $table->foreign('cidade_id')
+              ->references('id')->on('cidades')
+              ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ class CreatePaginasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paginas');
+        Schema::dropIfExists('bairros');
     }
 }

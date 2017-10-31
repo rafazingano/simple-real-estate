@@ -3,17 +3,11 @@
     <label>Título</label>
 </div>
 <div class="input-field">
-    <input type="text" name="descricao" class="validate" value="{{ isset($pagina->descricao) ? $pagina->descricao : '' }}">
-    <label>Descrição</label>
+    <input type="text" name="slug" value="{{ isset($pagina->slug) ? $pagina->slug : '' }}">
+    <label>Slug</label>
 </div>
-@if (isset($pagina->email))
 <div class="input-field">
-    <input type="text" name="email" class="validate" value="{{ isset($pagina->email) ? $pagina->email : '' }}">
-    <label>E-Mail</label>
-</div>
-@endif
-<div class="input-field">
-    <textarea name="texto" class="materialize-textarea">{{ isset($pagina->descricao) ? $pagina->descricao : '' }}</textarea>
+    <textarea name="texto" class="materialize-textarea">{{ isset($pagina->texto) ? $pagina->texto : '' }}</textarea>
     <label>Descrição</label>
 </div>
 <div class="row">
@@ -33,6 +27,10 @@
     </div>
 </div>
 <div class="input-field">
-    <textarea name="mapa" class="materialize-textarea">{{ isset($pagina->mapa) ? $pagina->mapa : '' }}</textarea>
-    <label>Mapa</label>
+    <input type="text" name="meta_titulo" value="{{ isset($pagina->meta_titulo) ? $pagina->meta_titulo : '' }}">
+    <label>Meta Titulo</label>
+</div>
+<div class="input-field">
+    <textarea name="meta_descricao">{{ isset($pagina->meta_descricao) ? $pagina->meta_descricao : '' }}</textarea>
+    <label>Meta Descrição</label>
 </div>

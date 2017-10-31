@@ -15,7 +15,7 @@
 		  	</nav>
         </div>
         <div class="row">
-            <form action="{{ route('admin.paginas.atualizar', $pagina->id) }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('admin.paginas.update', $pagina->id) }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <input type="hidden" name="_method" value="put">
                 @include('admin.paginas._form')
