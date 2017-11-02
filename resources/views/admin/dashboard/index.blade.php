@@ -85,7 +85,7 @@
               <p>Lista de páginas</p>
             </div>
             <div class="card-action">
-              <a class="white-text" href="{{route('admin.paginas')}}">Acessar</a>
+              <a class="white-text" href="{{route('admin.pages.index')}}">Acessar</a>
             </div>
           </div>
         </div>

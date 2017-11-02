@@ -1,7 +1,7 @@
 <nav>
     <div class="nav-wrapper blue">
         <div class="container">
-            <a href="{{ route('admin.principal') }}" class="brand-logo">
+            <a href="{{ route('admin.dashboard.index') }}" class="brand-logo">
                 SimpleRealEstate
             </a>
             <a href="#" data-activates="mobile-demo" class="button-collapse">
@@ -11,7 +11,7 @@
             </a>
             <ul class="right hide-on-med-and-down">
                 <li>
-                    <a href="{{ route('admin.principal') }}">
+                    <a href="{{ route('admin.dashboard.index') }}">
                         Início
                     </a>
                 </li>
@@ -35,7 +35,7 @@
                     </li>
                     <ul id="dropdown1" class="dropdown-content">
                         <li>
-                            <a href="{{ route('admin.principal') }}">{{ Auth::user()->name }}</a>
+                            <a href="{{ route('admin.dashboard.index') }}">{{ Auth::user()->name }}</a>
                         </li>
                         <li>
                             <a href="{{ route('admin.tipos') }}">Tipos</a>
@@ -68,7 +68,7 @@
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li>
-                    <a href="{{ route('admin.principal') }}">Início</a>
+                    <a href="{{ route('admin.dashboard.index') }}">Início</a>
                 </li>
                 <li>
                     <a target="_blanck" href="{{ route('site.home') }}">Site</a>
@@ -79,7 +79,7 @@
                     </li>
                 @else
                     <li>
-                        <a href="{{ route('admin.principal') }}">{{ Auth::user()->name }}</a>
+                        <a href="{{ route('admin.dashboard.index') }}">{{ Auth::user()->name }}</a>
                     </li>
                     <li>
                         <a href="{{ route('admin.tipos') }}">Tipos</a>

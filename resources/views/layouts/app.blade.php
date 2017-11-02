@@ -40,7 +40,7 @@
                         <h5 class="white-text">Links</h5>
                         <ul>
                             <li>
-                                <a class="grey-text text-lighten-3" href="{{ route('admin.principal')}}">
+                                <a class="grey-text text-lighten-3" href="{{ route('admin.dashboard.index')}}">
                                     Início
                                 </a>
                             </li>

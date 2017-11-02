@@ -17,9 +17,8 @@ class UsuarioController extends Controller
         $dados = $request->all();
 
     	if(Auth::attempt(['email'=>$dados['email'],'password'=>$dados['password']])){
-    		return redirect()->route('admin.principal')->with('mensagem', 'Login realizado com sucesso!')->with('class', 'green white-text');
+    		return redirect()->route('admin.dashboard.index')->with('mensagem', 'Login realizado com sucesso!')->with('class', 'green white-text');
     	}
-    	Session::flash('mensagem',['msg'=>'Erro! Confira seus dados.','class'=>'red white-text']);
     	return redirect()->route('admin.login')->with('mensagem', 'Erro! Confira seus dados.')->with('class', 'green white-text');
     }
 
@@ -35,7 +34,7 @@ class UsuarioController extends Controller
             $usuarios = User::all();
             return view('admin.usuarios.index', compact('usuarios'));
         } else {
-            return redirect()->route('admin.principal');
+            return redirect()->route('admin.dashboard.index');
         }
     }
 

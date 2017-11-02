@@ -22,11 +22,11 @@ Route::get('/imovel/{id}/{titulo?}',['as' => 'site.imovel', 'uses' => 'Site\Imov
 
 Route::get('/busca',['as' => 'site.busca', 'uses' => 'Site\HomeController@busca']);
 
-Route::get('/login', ['as' => 'admin.login', function() {
+Route::get('admin/login', ['as' => 'admin.login', function() {
     return view('admin.login.index');
 }]);
 
-Route::post('/login', ['as' => 'admin.login', 'uses' => 'Admin\UsuarioController@login']);
+Route::post('admin/login', ['as' => 'admin.login', 'uses' => 'Admin\UsuarioController@login']);
 
 //Route::group(['middleware' => 'auth'], function() {
 Route::namespace('Admin')->prefix('admin')->middleware(['auth'])->as('admin.')->group(function () {
@@ -34,8 +34,8 @@ Route::namespace('Admin')->prefix('admin')->middleware(['auth'])->as('admin.')->
   Route::resource('pages', 'PageController');
 
     Route::get('/login/sair',['as'=>'login.sair', 'uses'=>'UsuarioController@sair']);
-    Route::get('/admin', ['as' => 'principal', function() {
-        return view('principal.index');
+    Route::get('/', ['as' => 'dashboard.index', function() {
+        return view('admin.dashboard.index');
     }]);
 
     Route::get('/usuarios',['as'=>'usuarios', 'uses'=>'UsuarioController@index']);
